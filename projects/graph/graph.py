@@ -40,9 +40,12 @@ class Graph:
         # enquene our starting node
         # make a set to track if we've been here before
         # while our queue isn't empty
-        # dequeue whatever's at the front of our line, this is our current_node
-        # if we haven't visited this node yet,
-        # mark as visited
+            # dequeue whatever's at the front of our line, this is our current_node
+            # if we haven't visited this node yet,
+                # mark as visited
+                # get its neighbors
+                # for each of the neighbors
+                    # add to queue
 
         q = Queue()
         # store starting vertex
@@ -90,7 +93,7 @@ class Graph:
                 for neighbor in neighbors:
                     s.push(neighbor)
 
-    def dft_recursive(self, starting_vertex):
+    def dft_recursive(self, starting_vertex, visited=None):
         """
         Print each vertex in depth-first order
         beginning from starting_vertex.
@@ -172,7 +175,7 @@ class Graph:
 
         return None
 
-    def dfs_recursive(self, starting_vertex, destination_vertex):
+    def dfs_recursive(self, starting_vertex, destination_vertex, visited=set(), path=[]):
         """
         Return a list containing a path from
         starting_vertex to destination_vertex in
